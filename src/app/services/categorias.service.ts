@@ -6,7 +6,7 @@ import {HttpClient, HttpHeaders}from "@angular/common/http";
 })
 export class CategoriasService {
 
-  url: any = 'http://localhost:8080/v1/libros'//recibira cualquier tipo de dato
+  url: any = 'http://localhost:8080/v1/categorias'//recibira cualquier tipo de dato
 
   constructor(private http : HttpClient) { }
 
