@@ -8,7 +8,7 @@ import { CategoriasService } from 'src/app/services/categorias.service';
 })
 export class BodyComponent {
 
-  categorias : any ={};
+  categorias : any;
   arrayCategorias : any;
 
   constructor(private _categorias : CategoriasService){}
@@ -21,7 +21,12 @@ export class BodyComponent {
   obtenerCategorias(){
     this._categorias.obtenerCategora().subscribe( (respuesta:any )=>{
                   this.categorias = respuesta;
+                  this.arrayCategorias = this.categorias.categoriaResponse.categoria;
                   console.log( this.categorias);
+                  console.log(this.arrayCategorias);
+                  /* console.log(this.arrayCategorias[1] )*/
+                  ;
+                  
                   });//devuelve un observable. Nos debemos suscribir para cuando se obtenga una respuesta, nos notifique y obtener la respustas del servicio
           
   }

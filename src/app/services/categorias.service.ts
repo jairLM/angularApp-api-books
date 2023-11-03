@@ -6,7 +6,8 @@ import {HttpClient, HttpHeaders}from "@angular/common/http";
 })
 export class CategoriasService {
 
-  url: any = 'http://localhost:8080/v1/categorias'//recibira cualquier tipo de dato
+  //url: any = 'http://localhost:8080/v1/categorias'//recibira cualquier tipo de dato
+  url: any = 'http://apirest-books-aws-1-env.eba-pmu6irgf.us-east-1.elasticbeanstalk.com/v1/categorias'//recibira cualquier tipo de dato
 
   constructor(private http : HttpClient) { }
 
@@ -14,7 +15,7 @@ export class CategoriasService {
 
 
     const headers = new HttpHeaders({
-      authorization : 'Basic ' + btoa("edita"+":"+"edita123")
+      authorization : 'Basic ' + btoa("jair"+":"+"jair123")
     });
     /* const httpOptions = {
       headers: new HttpHeaders({
